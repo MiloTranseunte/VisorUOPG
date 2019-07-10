@@ -14,11 +14,11 @@
   //Ambiente TEST
 
 $(document).ready(function(){
-      $('#btnTest').click(function(e) {  
+      $('#btnDesa').click(function(e) {  
   var inputvalue = $("#input").val();
   if (inputvalue.length >= 6){
-       window.open("http://www.dghpsh.agcontrol.gob.ar/test/sgi.agcontrol.gob.ar/GestionTramite/VisorTramite.aspx?id="+inputvalue);}
-       else{window.open("http://www.dghpsh.agcontrol.gob.ar/test/sgi.agcontrol.gob.ar/VisorTramiteTR/"+inputvalue);}
+       window.open("http://clientes.grupomost.com/gcba/desa/sgi.agcontrol.gob.ar/GestionTramite/VisorTramite.aspx?id="+inputvalue);}
+       else{window.open("http://clientes.grupomost.com/gcba/desa/sgi.agcontrol.gob.ar/VisorTramiteTR/"+inputvalue);}
 
     });
 });
@@ -71,9 +71,15 @@ $(document).ready(function(){
         var codeData = window.btoa(inputvalue);
         window.open("http://www.dghpsh.agcontrol.gob.ar/SSIT/Mobile/GetObleatramite.aspx?id_solicitud="+codeData);
     });
-
 });
 
+$(document).ready(function(){
+      $('#obleaQRDesa').click(function(e) { 
+        var inputvalue = $('#input').val();
+        var codeData = window.btoa(inputvalue);
+        window.open("http://clientes.grupomost.com/gcba/desa/ssit.agcontrol.gob.ar/Mobile/GetObleatramite.aspx?id_solicitud="+codeData);
+    });
+});
 
 
 
