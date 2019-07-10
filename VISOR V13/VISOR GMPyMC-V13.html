@@ -1,0 +1,95 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+<title>Visor de tramite</title>
+
+<meta charset="UTF-8">
+
+<link href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAABILAAASCwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA////Jf///4j////L////6////+v////L////iP///yUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///8F////if////rb7tP/d718/0+1YP9PtF//d759/9vu0//////6////iP///wUAAAAAAAAAAAAAAAD///8F////sv////9JsFj/H9Fd/yDmd/8g7Yf/IOyD/yDoe/8fz1v/SbBY//////////+y////BQAAAAAAAAAA////if////8vtE3/IOZ3/x/2nv8i/7L/If/G/yH/v/8i/7f/IPad/yHnev8vtEz//////////4gAAAAA////Jf////pIsFj/IOZ3/yD9rf8k/8z/K//x/yX//f8k//r/K//q/yT/1P8g+qb/IOh7/0mwWP/////6////Jf///4jb7tL/H9Bd/yH3nv8j/8z/Kv///yz///8w/+P/MP/j/y3///8p//n/I//U/yH1m/8g0Fz/2+/T/////4j////Ld718/yDmd/8e/7T/Jf/x/zT///8ShEP/AAYA/wAGAP8Sg0H/NP///yT/6/8f/7j/IOh7/3e+fP/////L////60+0X/8g7Yf/I//F/yz//f8r/+T/ARkA/wAGAP8ABgD/ARkA/yv/5P8r//v/I/++/yDrg/9PtF//////6////+tPtF//IOuD/yP/vv88////Z////z5PGf8tNRL/LTUS/z5PGf9n////PP///yT/xv8g7Yf/T7Vg/////+v////Ld758/yDoe/8p/77/af///3n///9dtIH/Pk8Z/z5PGf9dtYL/ef///2n///8o/7n/IOd4/3e+fP/////L////iNvu0/8f0Fv/RP+w/2z/+f9w////c////3b///92////c////3H///9s//L/RP+z/x/RXv/b79P/////iP///yX////6SbFZ/0P2kv9q/9P/bf/5/3H///9t////bf///3L///9t//H/av/a/0P1kP9JsFj/////+v///yUAAAAA////if////82t1H/ZP+r/2n/zP9r/+H/av/n/2v/7f9r/93/af/N/2T/qf82uFP//////////4gAAAAAAAAAAP///wX///+y/////1W2Y/9Y6oj/av+x/2r/uP9q/7v/av+u/1jriv9VtmL//////////7L///8FAAAAAAAAAAAAAAAA////Bf///4n////62+7T/4LEhv9nwHP/Z8F0/4LEhv/b7tP/////+v///4j///8FAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA////Jf///4j////L////6////+v////L////iP///yUAAAAAAAAAAAAAAAAAAAAA8A8AAMADAACAAQAAgAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAEAAIABAADAAwAA8A8AAA==" rel="icon" type="image/x-icon">
+
+    <link rel="shortcut icon" href="icon1.ico">
+    <link rel="stylesheet" type="text/css" href="StylePage-V13.css">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+</head>
+
+<body>
+<nav style="display: block;">
+<fieldset style="width:98%; border-color:green; color:red;">
+
+<br>
+
+<legend align= "left">UOPG - GOMPyMC | | Excelentísimo Visor Integral &trade;</legend>
+
+	<b><i>Datos de Trámite:</i></b> <input type="text" value="" id="input">
+
+  <button type="button" id="btnProd"><big><tt><b><i>PROD</i></b></tt></big></button>
+	<button type="button" id="btnTest"><tt>TEST</tt></button>
+	<button type="button" id="btnHML"><tt>HML</tt></button> 
+  <button type="button" id="btnMost"><tt>EXP MOST</tt></button> 
+	<button type="button" id="btnJahdes" ><big><tt><b><i>JAHDE</i></b></tt></big></button>
+  <button type="button" id="obleaQRprod"><tt>Oblea QR</tt></button>
+  <button type="button" id="btnClear" onclick="document.getElementById('input').value = ''"><i><b><tt>Limpiar</tt></b></i></button>
+
+
+  <!-- PANELES DE MÁS AMBIENTES -->
+
+
+  <button class="BtnOfPaneles" type="button" onClick="onOFF_Panel('Panel_oculto')" title="">Panel más ambientes</button><br>
+  
+    <div id="Panel_oculto" style="display: none;">
+      
+        
+        <button class="BtnOfPaneles" type="button" onClick="onOFF_SSIT('SSIT_oculto')" title="">Ambientes de SSIT</button>
+        <!-- Matriz de SSIT -->
+          <div id="SSIT_oculto" style="display: none;">
+            <a class="styledBtnTEST" target="_blank" href="http://dghpsh.agcontrol.gob.ar/test/ssit.agcontrol.gob.ar/TAD">SSIT TAD TEST</a><br>
+            <a class="styledBtnPROD" target="_blank" href="http://www.dghpsh.agcontrol.gob.ar/ssit/">SSIT PRODUCCIÓN</a><br>
+            <a class="styledBtnPREPROD" target="_blank" href="http://www.dghpsh.agcontrol.gob.ar/preprod/ssit.agcontrol.gob.ar/">SSIT PREPROD</a><br>          
+            <a class="styledBtnHML" target="_blank" href="http://www.dghpsh.agcontrol.gob.ar/hml/ssit.agcontrol.gob.ar/">SSIT HML</a><br>          
+            <a class="styledBtnDESA" target="_blank" href="http://clientes.grupomost.com/gcba/desa/ssit.agcontrol.gob.ar/">SSIT DESA</a>
+          </div>
+          <br>
+          <button class="BtnOfPaneles" type="button" onClick="onOFF_SGI('SGI_oculto')" title="">Ambientes de SGI</button>
+        <!-- Matriz de SGI -->
+          <div id="SGI_oculto" style="display: none;">            
+            <a class="styledBtnPREPROD" target="_blank" href="http://www.dghpsh.agcontrol.gob.ar/preprod/sgi.agcontrol.gob.ar/">SGI PREPROD</a><br>        
+            <a class="styledBtnDESA" target="_blank" href="http://clientes.grupomost.com/gcba/desa/sgi.agcontrol.gob.ar/Account/Login?">SGI DESA</a>
+            </div>
+          <br>
+        <button class="BtnOfPaneles" type="button" onClick="onOFF_AT('AT_oculto')" title="">Ambientes de AT</button>
+        <!-- Matriz de AT -->
+          <div id="AT_oculto" style="display: none;">
+            <a class="styledBtnTEST" target="_blank" href="http://www.dghpsh.agcontrol.gob.ar/test/encomiendadigital.agcontrol.gob.ar/">AT TEST</a><br>
+            <a class="styledBtnPROD" target="_blank" href="http://www.dghpsh.agcontrol.gob.ar/encomiendadigital/">AT PRODUCCIÓN</a>
+          </div>
+          <br>
+        <button class="BtnOfPaneles" type="button" onClick="onOFF_CONSEJOS('CONSEJOS_oculto')" title="">Ambiente de Consejos</button>
+          <!-- Matriz de CONSEJOS -->
+          <div id="CONSEJOS_oculto" style="display: none;">
+            <a class="styledBtnTEST" target="_blank" href="http://www.dghpsh.agcontrol.gob.ar/test/consejos.agcontrol.gob.ar/">Consejos TEST</a>
+            </div>
+          <br>
+        <button class="BtnOfPaneles" type="button" onClick="onOFF_JAVA('JAVA_oculto')" title="">Ambiente MOST(JAVA)</button>
+          <!-- Matriz de JAVA -->
+          <div id="JAVA_oculto" style="display: none;">
+            <a class="styledBtnTEST" target="_blank" href="http://clientes.grupomost.com/gcba/habilitaciones/login.jsp">MOST TEST</a><br>
+            <a class="styledBtnPROD" target="_blank" href="http://dghpsh.agcontrol.gob.ar/habilitaciones/login.jsp">MOST PROD</a>
+          </div><br>
+
+      
+    </div>
+
+
+</fieldset>
+
+</nav>
+
+<BR>
+  <iframe id="marcoVisor" src="http://jahde/hdk_agc_prd/servlet/thdkcas" style="width:98%; height:628px" ></iframe>
+</BR>
+
+<script type="text/javascript" src="funcionesVisor-V13.js"></script>
+
+</body>
+</html>
